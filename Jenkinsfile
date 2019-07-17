@@ -24,6 +24,13 @@ pipeline {
             }
         }
 
+        stage('Testing pipenv version') {
+            steps {
+                echo "Checking pipenv version"
+                sh  ''' pipenv --version
+                    '''
+            }
+        }
         stage('Build environment') {
             steps {
                 echo "Building virtualenv"
