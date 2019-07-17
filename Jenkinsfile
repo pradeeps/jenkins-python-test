@@ -28,7 +28,8 @@ pipeline {
             steps {
                 echo "Checking pipenv version"
                 sh  ''' #!/bin/bash
-                        pipenv --version
+
+                        python --version
                     '''
             }
         }
